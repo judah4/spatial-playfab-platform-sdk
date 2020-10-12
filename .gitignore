@@ -39,3 +39,7 @@ Platform/SpatialPlayFabPlatformApi/SpatialPlayFabPlatformApi/appsettings.Develop
 workers/unity/Assets/PlayFabSharedSettings.asset
 
 workers/unity/Assets/PlayFabSharedSettings.asset.meta
+
+workers/unity/Assets/PlayFabServerAuthSettings.asset
+
+workers/unity/Assets/PlayFabServerAuthSettings.asset.meta

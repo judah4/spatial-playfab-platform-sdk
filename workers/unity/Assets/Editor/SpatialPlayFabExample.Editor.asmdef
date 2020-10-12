@@ -1,12 +1,12 @@
 {
-    "name": "BlankProject.Editor",
+    "name": "SpatialPlayFabExample.Editor",
     "references": [
-        "BlankProject",
         "Improbable.Gdk.BuildSystem",
         "Improbable.Gdk.Core",
         "Improbable.Gdk.Generated",
         "Improbable.Gdk.QueryBasedInterestHelper",
-        "Unity.Entities"
+        "Unity.Entities",
+        "SpatialPlayFabExample"
     ],
     "includePlatforms": [
         "Editor"
@@ -17,5 +17,6 @@
     "precompiledReferences": [],
     "autoReferenced": true,
     "defineConstraints": [],
-    "versionDefines": []
+    "versionDefines": [],
+    "noEngineReferences": false
 }
