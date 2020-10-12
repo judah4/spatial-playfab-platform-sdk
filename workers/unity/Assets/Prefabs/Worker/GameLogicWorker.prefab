@@ -46,3 +46,5 @@ MonoBehaviour:
   MaxConnectionAttempts: 3
   entityRepresentationMapping: {fileID: 11400000, guid: d7177170b2dc0444f82f6d4d018797e0,
     type: 2}
+  PlayFabServerAuthSettings: {fileID: 11400000, guid: 224a08b087c92d04e8aa8d47264f74d6,
+    type: 2}

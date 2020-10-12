@@ -4,6 +4,7 @@ using Improbable.Gdk.Core.Representation;
 using Improbable.Gdk.GameObjectCreation;
 using Improbable.Gdk.PlayerLifecycle;
 using Improbable.Worker.CInterop;
+using PlayFab;
 using UnityEngine;
 
 namespace BlankProject
@@ -14,8 +15,19 @@ namespace BlankProject
 
         public const string WorkerType = "UnityGameLogic";
 
+        public PlayFabServerAuthSettings PlayFabServerAuthSettings;
+
         private async void Start()
         {
+            if (PlayFabServerAuthSettings != null)
+            {
+                PlayFabSettings.DeveloperSecretKey = PlayFabServerAuthSettings.PlayFabKey;
+            }
+            else
+            {
+                Debug.LogError("Check Playfab Credentials for Server. Auth Settings are missing.");
+            }
+
             PlayerLifecycleConfig.CreatePlayerEntityTemplate = EntityTemplates.CreatePlayerEntityTemplate;
 
             IConnectionFlow flow;
