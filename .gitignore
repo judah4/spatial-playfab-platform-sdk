@@ -35,3 +35,7 @@ _ReSharper.Caches
 perftest-results/
 
 Platform/SpatialPlayFabPlatformApi/SpatialPlayFabPlatformApi/appsettings.Development.json
+
+workers/unity/Assets/PlayFabSharedSettings.asset
+
+workers/unity/Assets/PlayFabSharedSettings.asset.meta
