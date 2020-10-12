@@ -33,3 +33,5 @@ _ReSharper.Caches
 
 .shared-ci/
 perftest-results/
+
+Platform/SpatialPlayFabPlatformApi/SpatialPlayFabPlatformApi/appsettings.Development.json
