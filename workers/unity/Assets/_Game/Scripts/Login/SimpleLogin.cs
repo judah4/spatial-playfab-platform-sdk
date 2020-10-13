@@ -9,7 +9,7 @@ using TMPro;
 public class SimpleLogin : MonoBehaviour
 {
 
-    [SerializeField] private string _successfulLoginScreen;
+    [SerializeField] private string _successfulLoginScene;
     [SerializeField] private TMP_InputField _loginInputField;
     [SerializeField] private TMP_InputField _passwordInputField;
     // Start is called before the first frame update
@@ -59,6 +59,6 @@ public class SimpleLogin : MonoBehaviour
         Debug.Log("Logged in.");
 
 
-        SceneManager.LoadScene(_successfulLoginScreen);
+        SceneManager.LoadScene(_successfulLoginScene);
     }
 }

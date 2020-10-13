@@ -30,6 +30,13 @@ public class LoginDetails : MonoBehaviour
 }
 
 [System.Serializable]
+public class DeploymentsResponseData
+{
+    public DeploymentTokens[] SpatialDeployments;
+    public string PlayerIdentityToken;
+}
+
+[System.Serializable]
 public class DeploymentTokens
 {
     public string DeploymentName;

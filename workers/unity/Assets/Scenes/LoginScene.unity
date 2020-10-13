@@ -1062,7 +1062,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a742159d8b09184794995714dd6b513, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _successfulLoginScreen: CharSelectScene
+  _successfulLoginScene: CharSelectScene
   _loginInputField: {fileID: 1772144003}
   _passwordInputField: {fileID: 1478510534}
 --- !u!4 &905412719

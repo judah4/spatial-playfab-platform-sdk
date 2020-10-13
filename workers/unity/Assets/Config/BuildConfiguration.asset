@@ -15,6 +15,8 @@ MonoBehaviour:
   WorkerBuildConfigurations:
   - WorkerType: UnityClient
     ScenesForWorker:
+    - {fileID: 102900000, guid: 49df8e087de6a9648824ccd60fb55ac5, type: 3}
+    - {fileID: 102900000, guid: ca468ae6d22393845ad0496f5fe155e7, type: 3}
     - {fileID: 102900000, guid: e9d72ec001e1f42b79ccca8467dcca90, type: 3}
     LocalBuildConfig:
       BuildTargets:
