@@ -10,14 +10,14 @@ using System.Threading.Tasks;
 
 namespace PlatformConsole
 {
-    public class ServiceAccountService
+    public partial class ServiceAccountService
     {
         /// <summary>
         ///     PLEASE REPLACE.
         ///     Your SpatialOS project name.
         ///     This scenario will create a new service account with read and write access to this project.
         /// </summary>
-        private const string ProjectName = "PLEASE REPLACE.";
+        private static string ProjectName = "PLEASE REPLACE.";
 
         /// <summary>
         ///     The threshold for when a service account's expiry time should be increased, in days relative to
@@ -96,10 +96,11 @@ namespace PlatformConsole
                 // Calculate how many days it is until the service account expires, and output a message
                 // depending on whether it has already expired, or is close to expiry
 
+                if(serviceAccount.Name != ServiceAccountName)
+                    continue;
+
                 var daysUntilExpiry =
                     Math.Floor((serviceAccount.ExpirationTime.ToDateTime() - DateTime.UtcNow).TotalDays);
-
-                Console.WriteLine($"{serviceAccount.Id} {serviceAccount.Token}");
 
                 Console.WriteLine(daysUntilExpiry < 0
                     ? $"Service account '{serviceAccount.Name}' expired {Math.Abs(daysUntilExpiry)} day(s) ago"

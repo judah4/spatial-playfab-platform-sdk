@@ -14,6 +14,7 @@ public class LoginDetails : MonoBehaviour
             if (_instance == null)
             {
                 _instance = new GameObject("Login Details").AddComponent<LoginDetails>();
+                DontDestroyOnLoad(_instance.gameObject);
             }
             return _instance;
         }

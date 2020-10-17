@@ -31,6 +31,7 @@ namespace SpatialPlayFabPlatformApi
             {
                 await GetToken();
             }
+
             return new PlatformRefreshTokenCredential(Token.Token);
         }
 
@@ -50,7 +51,9 @@ namespace SpatialPlayFabPlatformApi
             Token = null;
 
             var tokenData = await PlayFab.PlayFabServerAPI.GetTitleInternalDataAsync(new GetTitleDataRequest()
-            { Keys = new List<string>() { "SpatialosPlatformToken" } });
+            {
+                Keys = new List<string>() {"SpatialosPlatformToken"}
+            });
 
             if (tokenData.Error != null)
             {
@@ -64,11 +67,8 @@ namespace SpatialPlayFabPlatformApi
                 throw new Exception("Token does not exist in playfab title data.");
             }
 
-            Token = new TokenData()
-            {
-                Token = token,
-                TimeFound = DateTime.UtcNow,
-            };
+            Token = new TokenData() {Token = token, TimeFound = DateTime.UtcNow,};
 
         }
     }
+}

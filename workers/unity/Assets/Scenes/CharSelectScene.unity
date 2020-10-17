@@ -669,8 +669,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64c8d13bc7b402647aa22b7f885615be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameScene: ClientScene
-  _platformApiUrl: http://localhost:5000
+  _gameScene: DevelopmentScene
+  _platformApiUrl: http://localhost:64227
   _statusText: {fileID: 1740259754}
 --- !u!4 &905412719
 Transform:

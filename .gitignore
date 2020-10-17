@@ -43,3 +43,5 @@ workers/unity/Assets/PlayFabSharedSettings.asset.meta
 workers/unity/Assets/PlayFabServerAuthSettings.asset
 
 workers/unity/Assets/PlayFabServerAuthSettings.asset.meta
+
+Platform/SpatialPlayFabPlatformApi/PlatformConsole/ServiceAccountServiceSecret.cs

@@ -1,4 +1,5 @@
-﻿using System;
+using System;
+using System.Threading.Tasks;
 
 namespace PlatformConsole
 {
@@ -7,6 +8,8 @@ namespace PlatformConsole
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            var service = new ServiceAccountService();
+            Task.Run(() => service.Main()).Wait();
         }
     }
 }
