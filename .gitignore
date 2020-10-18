@@ -33,3 +33,15 @@ _ReSharper.Caches
 
 .shared-ci/
 perftest-results/
+
+Platform/SpatialPlayFabPlatformApi/SpatialPlayFabPlatformApi/appsettings.Development.json
+
+workers/unity/Assets/PlayFabSharedSettings.asset
+
+workers/unity/Assets/PlayFabSharedSettings.asset.meta
+
+workers/unity/Assets/PlayFabServerAuthSettings.asset
+
+workers/unity/Assets/PlayFabServerAuthSettings.asset.meta
+
+Platform/SpatialPlayFabPlatformApi/PlatformConsole/ServiceAccountServiceSecret.cs

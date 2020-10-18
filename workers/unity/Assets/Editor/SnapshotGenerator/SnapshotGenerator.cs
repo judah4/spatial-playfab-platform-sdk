@@ -1,4 +1,5 @@
 using System.IO;
+using BlankProject;
 using Improbable;
 using Improbable.Gdk.Core;
 using Improbable.Gdk.PlayerLifecycle;
@@ -8,7 +9,7 @@ using UnityEngine;
 
 using Snapshot = Improbable.Gdk.Core.Snapshot;
 
-namespace BlankProject.Editor
+namespace SpatialPlayFabExample.Editor
 {
     internal static class SnapshotGenerator
     {

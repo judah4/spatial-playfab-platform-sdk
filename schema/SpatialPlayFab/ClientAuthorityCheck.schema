@@ -1,0 +1,7 @@
+package spatialplayfab;
+
+component ClientAuthorityCheck {
+  id = 1000;
+
+  string client_worker_id = 1;
+}

@@ -1,0 +1,22 @@
+package spatialplayfab;
+
+type ValidatePlayer {
+    string player_id = 1;
+    string session_ticket = 2;
+}
+type ValidateResponse {
+    bool valid = 1;
+}
+
+// Parameters for player movement
+component PlayerState {
+  
+  id = 12020;
+
+  string player_id = 1;
+  bool validated = 2;
+
+    command ValidateResponse validate(ValidatePlayer);
+
+
+}
