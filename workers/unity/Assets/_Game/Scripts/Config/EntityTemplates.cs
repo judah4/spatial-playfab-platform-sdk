@@ -31,6 +31,7 @@ namespace BlankProject.Scripts.Config
 
             var template = new EntityTemplate();
             template.AddComponent(new Position.Snapshot(coords), clientAttribute);
+            template.AddComponent(new ClientAuthorityCheck.Snapshot(workerId), clientAttribute);
             template.AddComponent(new Metadata.Snapshot("Player"), serverAttribute);
             template.AddComponent(new PlayerState.Snapshot(playerId, false), serverAttribute);
 
