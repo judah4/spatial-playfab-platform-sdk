@@ -52,7 +52,7 @@ public class PlayerStateBehavior : MonoBehaviour
                     PlayerStateCommandReceiver.SendValidateResponse(request.RequestId, new ValidateResponse(false));
                     return;
                 }
-                PlayFabServerAPI.GetUserData(new GetUserDataRequest(), result =>
+                PlayFabServerAPI.GetUserData(new GetUserDataRequest() { PlayFabId = resultAuth.UserInfo.PlayFabId }, result =>
                 {
                     //used loaded user data or player data from PlayFab
 

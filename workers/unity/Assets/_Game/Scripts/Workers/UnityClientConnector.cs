@@ -22,25 +22,18 @@ namespace BlankProject
             var builder = new SpatialOSConnectionHandlerBuilder()
                 .SetConnectionParameters(connParams);
 
-            if (!Application.isEditor)
+            var initializer = new DragonConnectionFlowInitializer(true);
+            var commandLineInitializer = new CommandLineConnectionFlowInitializer();
+            switch (initializer.GetConnectionService())
             {
-                var initializer = new DragonConnectionFlowInitializer(true);
-                var commandLineInitializer = new CommandLineConnectionFlowInitializer();
-                switch (initializer.GetConnectionService())
-                {
-                    case ConnectionService.Receptionist:
-                        builder.SetConnectionFlow(new ReceptionistFlow(CreateNewWorkerId(WorkerType), commandLineInitializer));
-                        break;
-                    case ConnectionService.Locator:
-                        builder.SetConnectionFlow(new LocatorFlow(initializer));
-                        break;
-                    default:
-                        throw new ArgumentOutOfRangeException();
-                }
-            }
-            else
-            {
-                builder.SetConnectionFlow(new ReceptionistFlow(CreateNewWorkerId(WorkerType)));
+                case ConnectionService.Receptionist:
+                    builder.SetConnectionFlow(new ReceptionistFlow(CreateNewWorkerId(WorkerType), commandLineInitializer));
+                    break;
+                case ConnectionService.Locator:
+                    builder.SetConnectionFlow(new LocatorFlow(initializer));
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
             }
 
             await Connect(builder, new ForwardingDispatcher()).ConfigureAwait(false);

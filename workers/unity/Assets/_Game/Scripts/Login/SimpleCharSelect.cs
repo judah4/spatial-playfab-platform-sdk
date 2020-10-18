@@ -27,6 +27,15 @@ public class SimpleCharSelect : MonoBehaviour
         SceneManager.LoadScene(_gameScene);
     }
 
+    public void ConnectLocal()
+    {
+        LoginDetails.Instance.DeploymentSelected = new DeploymentTokens()
+        {
+            DeploymentName = "Local",
+        };
+        Connect();
+    }
+
     IEnumerator SendGetDeployments()
     {
 
@@ -44,6 +53,7 @@ public class SimpleCharSelect : MonoBehaviour
 
         if (webRequest.isNetworkError)
         {
+            _statusText.text = "Error.";
             Debug.LogError("Deployments " + webRequest.error);
         }
         else
@@ -65,6 +75,7 @@ public class SimpleCharSelect : MonoBehaviour
 
                 LoginDetails.Instance.PlayerIdentityToken = deployments.PlayerIdentityToken;
                 //refresh view
+                _statusText.text = "Ready!";
             }
             else
             {
