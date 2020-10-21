@@ -22,6 +22,8 @@
 
 # About
 
+Slides https://docs.google.com/presentation/d/11LN3T0F0pMrKEQA0OUUpV7_t-c63RV7kY6bhv-5KAEM/edit?usp=sharing  
+
 This is a blank project that you can use to as a base for your own game with the [SpatialOS GDK for Unity](https://github.com/spatialos/gdk-for-unity). It has the GDK boilerplate required to start developing games for SpatialOS:
 
 - A Unity project already setup with the [SpatialOS GDK for Unity](https://github.com/spatialos/gdk-for-unity).
